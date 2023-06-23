@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace aim_trainer_game
 {
 
-    public class StateManager
+    public class GameStateManager
     {
         private GameState _currentState;
 

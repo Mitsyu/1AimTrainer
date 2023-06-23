@@ -13,10 +13,10 @@ namespace aim_trainer_game
 {
     public abstract class GameState
     {
-        protected StateManager _stateManager;
+        protected GameStateManager _stateManager;
         
 
-        public GameState(StateManager stateManager)
+        public GameState(GameStateManager stateManager)
         {
             _stateManager = stateManager;
         }

@@ -9,7 +9,7 @@ namespace aim_trainer_game
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         //private GameState _gameState;
-        private StateManager _stateManager;
+        private GameStateManager _stateManager;
 
 
         public Game1()
@@ -25,8 +25,8 @@ namespace aim_trainer_game
             _graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
             _graphics.ApplyChanges();
 
-            _stateManager = new StateManager();
-            _stateManager.AddState(new MainMenuState(_stateManager));
+            _stateManager = new GameStateManager();
+            _stateManager.AddState(new MainMenu(_stateManager));
 
             base.Initialize();
         }

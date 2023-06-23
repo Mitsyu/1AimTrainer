@@ -11,14 +11,14 @@ using static System.Formats.Asn1.AsnWriter;
 
 namespace aim_trainer_game
 {
-    public class ScoringMenuState : GameState
+    public class ScoringMenu : GameState
     {
         
         private SpriteFont _font;
         private int _score;
         private float _accuracy;
         private int _previousScore;
-        public ScoringMenuState(StateManager stateManager) : base(stateManager)
+        public ScoringMenu(GameStateManager stateManager) : base(stateManager)
         {
            //constructor
         }
@@ -37,7 +37,7 @@ namespace aim_trainer_game
 
             if (keyboardState.IsKeyDown(Keys.Enter))
             {
-                _stateManager.ChangeState(new GameScreenState(_stateManager));
+                _stateManager.ChangeState(new GameScreen(_stateManager));
             }
         }
 

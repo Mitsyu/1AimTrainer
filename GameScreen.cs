@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace aim_trainer_game
 {
-    public class GameScreenState : GameState
+    public class GameScreen : GameState
     {
         private Texture2D targetTexture;
         private SpriteFont font;
@@ -24,7 +24,7 @@ namespace aim_trainer_game
         private const int ScreenWidth = 1920; 
         private const int ScreenHeight = 1080; 
         private const int GameDurationSeconds = 60; 
-        public GameScreenState(StateManager stateManager) : base(stateManager)
+        public GameScreen(GameStateManager stateManager) : base(stateManager)
         {
             targetTexture = null;
             font = null;

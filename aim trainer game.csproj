@@ -12,7 +12,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Camera.cs" />
-    <Compile Remove="MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Icon.ico" />
