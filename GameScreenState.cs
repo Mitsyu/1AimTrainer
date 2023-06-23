@@ -26,7 +26,14 @@ namespace aim_trainer_game
         private const int GameDurationSeconds = 60; 
         public GameScreenState(StateManager stateManager) : base(stateManager)
         {
-            // Game screen state initialization
+            targetTexture = null;
+            font = null;
+            targets = new List<Vector2>();
+            score = 0;
+            previousScore = 0;
+            accuracy = 0;
+            timer = TimeSpan.Zero;
+            currentTime = TimeSpan.Zero;
         }
         
         public override void LoadContent(ContentManager content)
@@ -76,7 +83,7 @@ namespace aim_trainer_game
 
             if (targets.Count < 5)
             {
-                /
+                
                 Random random = new Random();
                 Vector2 targetPosition = new Vector2(random.Next(0, ScreenWidth), random.Next(0, ScreenHeight));
 
@@ -86,17 +93,17 @@ namespace aim_trainer_game
             currentTime += gameTime.ElapsedGameTime;
             if (currentTime >= timer)
             {
-                // Game logic 
-                // Example: Reset game state, show score screen, etc.
+                previousScore = score;
+                score = 0;
+                accuracy = 0;
+                currentTime = TimeSpan.Zero;
+                SpawnTargets(5);
             }
         }
         
         public override void Draw(SpriteBatch spriteBatch)
         {
-            // Draw game screen logic here
-            // No need to call SpriteBatch.Begin() and SpriteBatch.End() here
-
-           
+            
             foreach (Vector2 target in targets)
             {
                 spriteBatch.Draw(targetTexture, target, Color.White);
