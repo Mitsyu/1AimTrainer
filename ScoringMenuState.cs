@@ -29,9 +29,9 @@ namespace aim_trainer_game
             _font = content.Load<SpriteFont>("Score"); // Replace "Score" with the actual font file name you want to use
         }
 
-        
         public override void Update(GameTime gameTime)
         {
+
             KeyboardState keyboardState = Keyboard.GetState();
 
             if (keyboardState.IsKeyDown(Keys.Enter))
@@ -40,6 +40,7 @@ namespace aim_trainer_game
                 _stateManager.ChangeState(new GameScreenState(_stateManager));
             }
         }
+
 
         public override void Draw(SpriteBatch spriteBatch)
         {

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace aim_trainer_game
 {
+
     public class StateManager
     {
         private GameState _currentState;
@@ -45,36 +46,5 @@ namespace aim_trainer_game
             _currentState.Enter();
         }
     }
-    //public class StateManager
-    //{
-    //    private GameState _currentState;
 
-    //    public void AddState(GameState state)
-    //    {
-    //        _currentState = state;
-    //        _currentState.Enter();
-    //    }
-
-    //    public void ChangeState(GameState state)
-    //    {
-    //        _currentState.Exit();
-    //        _currentState = state;
-    //        _currentState.Enter();
-    //    }
-
-    //    public void LoadContent(ContentManager content)
-    //    {
-    //        _currentState.LoadContent(content);
-    //    }
-
-    //    public void Update(GameTime gameTime)
-    //    {
-    //        _currentState.Update(gameTime);
-    //    }
-
-    //    public void Draw(SpriteBatch spriteBatch)
-    //    {
-    //        _currentState.Draw(spriteBatch);
-    //    }
-    //}
 }

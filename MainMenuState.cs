@@ -29,6 +29,7 @@ namespace aim_trainer_game
            
         }
 
+      
         public override void Update(GameTime gameTime)
         {
             KeyboardState currentKeyboardState = Keyboard.GetState();
@@ -41,7 +42,6 @@ namespace aim_trainer_game
             }
 
             _previousKeyboardState = currentKeyboardState;
-           
         }
 
         public override void Draw(SpriteBatch spriteBatch)

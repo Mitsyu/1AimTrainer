@@ -11,25 +11,6 @@ using System.Xml.Linq;
 
 namespace aim_trainer_game
 {
-    //public abstract class GameState
-    //{
-    //    protected Game _game;
-
-    //    public virtual void LoadContent(ContentManager content)
-    //    {
-    //        // Load content here
-    //    }
-
-    //    public virtual void Update(GameTime gameTime)
-    //    {
-    //        // Update logic here
-    //    }
-
-    //    public virtual void Draw(SpriteBatch spriteBatch)
-    //    {
-    //        // Draw logic here
-    //    }
-    //}
     public abstract class GameState
     {
         protected StateManager _stateManager;
@@ -51,7 +32,7 @@ namespace aim_trainer_game
 
         public virtual void LoadContent(ContentManager content)
         {
-            // Load content specific to the state
+            _stateManager.LoadContent(content);
         }
 
         public virtual void Update(GameTime gameTime)
