@@ -35,7 +35,7 @@ namespace aim_trainer_game
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+           
             _stateManager.LoadContent(Content);
 
 

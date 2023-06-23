@@ -26,7 +26,7 @@ namespace aim_trainer_game
         public override void LoadContent(ContentManager content)
         {
             base.LoadContent(content);
-            _font = content.Load<SpriteFont>("Score"); // Replace "Score" with the actual font file name you want to use
+            _font = content.Load<SpriteFont>("Score");
         }
 
         public override void Update(GameTime gameTime)
@@ -36,7 +36,6 @@ namespace aim_trainer_game
 
             if (keyboardState.IsKeyDown(Keys.Enter))
             {
-                // Start the game again by transitioning to the game screen
                 _stateManager.ChangeState(new GameScreenState(_stateManager));
             }
         }

@@ -23,7 +23,6 @@ namespace aim_trainer_game
         }
         public override void LoadContent(ContentManager content)
         {
-            // Load main menu content here
             _backgroundTexture = content.Load<Texture2D>("background");
             _font = content.Load<SpriteFont>("Score");
            
@@ -34,10 +33,8 @@ namespace aim_trainer_game
         {
             KeyboardState currentKeyboardState = Keyboard.GetState();
 
-            // Check for input to start the game
             if (currentKeyboardState.IsKeyDown(Keys.Enter) && _previousKeyboardState.IsKeyUp(Keys.Enter))
             {
-                // Start the game by transitioning to the game screen
                 _stateManager.ChangeState(new GameScreenState(_stateManager));
             }
 
@@ -46,10 +43,8 @@ namespace aim_trainer_game
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            // Draw main menu logic here
             spriteBatch.Draw(_backgroundTexture, Vector2.Zero, Color.White);
 
-            // Draw menu text
             spriteBatch.DrawString(_font, "Main Menu", new Vector2(100, 100), Color.White);
             spriteBatch.DrawString(_font, "Press Enter to Start", new Vector2(100, 200), Color.White);
         }
