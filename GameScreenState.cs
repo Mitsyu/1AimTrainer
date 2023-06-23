@@ -40,6 +40,7 @@ namespace aim_trainer_game
         {
             // Load game screen content here
             targetTexture = content.Load<Texture2D>("target");
+
             font = content.Load<SpriteFont>("Score");
             targets = new List<Vector2>();
 

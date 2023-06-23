@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Input;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace aim_trainer_game
 {
@@ -19,7 +20,7 @@ namespace aim_trainer_game
         private int _previousScore;
         public ScoringMenuState(StateManager stateManager) : base(stateManager)
         {
-            // Scoring menu state initialization
+           //constructor
         }
 
         
